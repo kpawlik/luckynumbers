@@ -1,0 +1,33 @@
+{{define "check"}}
+<html>
+<head>
+<title>Lotto results</title>
+	{{template "css"}}
+</head>
+<body>
+	{{template "header"}}
+<div class="table w260">
+	<div class="row">
+		<div class="cell w110">DATE </div><div class="cell w130">{{.Date}}</div>
+	</div>
+	<div class="row">
+		<div class="cell w110">LUCKY </div><div class="cell w130">{{.LuckyNo}}</div>
+	</div>
+	<div class="row">
+		<div class="cell w110">LOTTO </div><div class="cell w130">{{.LottoNo}}</div>
+	</div>
+	<div class="row gr">
+		<div class="cell w110">LOTTO WIN</div><div class="cell w130 {{.LottoWin | printWin}}">{{.LottoWin | printNE}}</div>
+	</div>
+	{{if .Plus}}
+	<div class="row">
+		<div class="cell w110">PLUS</div><div class="cell w130">{{.PlusNo}}</div>
+	</div>	
+	<div class="row gr">
+		<div class="cell w110">PLUS WIN</div><div class="cell w130 {{.PlusWin | printWin}}">{{.PlusWin | printNE}}</div>
+	</div>
+	{{end}}
+</div>
+</body>
+</html>
+{{end}}

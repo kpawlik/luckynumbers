@@ -1,0 +1,15 @@
+{{define "error"}}
+<html>
+	<head>
+	{{template "css"}}
+  	</head>
+<body>
+{{template "header"}}
+<h5>
+ERROR:
+</h5>
+<div>{{.}}</div>
+<a href="javascript:history.go(-1);"><div class="sbs"> BACK </div></a>
+</body>
+</html>
+{{end}}

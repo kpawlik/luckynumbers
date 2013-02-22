@@ -1,0 +1,34 @@
+{{define "change"}}
+<html>
+  <head>
+	{{template "css"}}
+  </head>
+  <body>
+	{{template "header"}}
+	
+    <form action="/store" method="post">
+<div class="table">
+	<div class="row">
+	      <div class="cell w150">Numbers</div><div class="cell w200"><input type="text" cols="20" name="numbers" value="{{ .Results }}"/></div>
+	</div>
+	<div class="row">
+		  <div class="cell w150">Start date(DD-MM-YY)</div><div class="cell w200"><input type="text" cols="20" name="start" value="{{ .StartDate }}"/></div>
+	</div>
+	<div class="row">
+		  <div class="cell w150">Exp date(DD-MM-YY)</div><div class="cell w200"><input type="text" cols="20" name="expiration" value="{{ .ExpDate }}"/></div>
+	</div>
+	<div class="row">
+		  <div class="cell w150">Plus</div><div class="cell w200"><input type="checkbox" cols="4" name="plus" {{ if .Plus }} checked {{ end }}/></div>
+	</div>
+	<div class="row">
+		  <div class="cell w150">PIN</div><div class="cell w200"><input type="text" cols="4" name="pin"></input></div>
+	</div>
+	<div class="row">						
+	      <div class="cell w150"><input type="submit" value="Save"></div><div class="cell"></div>
+	</div>
+<div>
+    </form>
+	
+  </body>
+</html>
+{{end}}

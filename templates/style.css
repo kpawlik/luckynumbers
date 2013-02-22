@@ -1,0 +1,72 @@
+{{define "css"}}
+<style>
+.table{
+	margin-top: 5px;
+	display:table;         
+  	border:1px solid  #666666;         
+  	border-spacing:2px;/*cellspacing:poor IE support for  this*/
+}
+
+.w110{
+	width:110px;
+}
+.w130{
+	width:130px;
+}
+.w150{
+	width:150px;
+}
+.w200{
+	width:200px;
+}
+.w250{
+	width:250px;
+}
+.w500{
+	width: 500px;
+}
+.cell{
+	 float:left;/*fix for  buggy browsers*/
+  	 display:table-column;         
+  	 /*width:100px;*/
+}
+.row{
+	display:table-row;
+	background-color: #DDD;
+}
+.sbs { 
+	width: 80px; 
+	border: 1px solid black; 
+	background-color: #fdd;
+	display:inline-block;
+	text-align: center;
+	margin-right: 5px;
+}
+.sbs-l{
+	float: left;
+}
+.sbs-l{
+	float: right;
+}
+.title{
+	font-weight: bold;
+	color: #0000FF;
+}
+a{
+	text-decoration: none;
+	color: #333;
+	font-weight: bold;
+}
+.footer {
+	float: none;
+}
+.win{
+		font-weight: bold;
+		color: #F00;
+		text-decoration: underline;
+}
+.gr{
+	background-color: #DFD;
+}
+</style>
+{{end}}

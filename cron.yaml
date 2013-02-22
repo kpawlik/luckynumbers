@@ -1,0 +1,5 @@
+cron:
+- description: day check
+  url: /check
+  timezone: Europe/Warsaw
+  schedule: every day 23:30

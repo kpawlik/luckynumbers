@@ -1,0 +1,24 @@
+{{define "stats"}}
+<html>
+  <head>
+	{{template "css"}}
+  </head>
+  <body>
+	{{template "header"}}
+	<div class="table w500">
+    <div class="row">
+		<div class="cell w150"> DATE </div>
+		<div class="cell w150"> LOTTO WIN </div>
+		<div class="cell w150"> PLUS WIN </div>		
+	</div>
+	{{range .}}
+	<div class="row">
+		<div class="cell w150"> {{.Date}} </div>
+		<div class="cell w150 {{.LottoWin | printWin}}"> {{.LottoWin | printNE}} </div>
+		<div class="cell w150 {{.PlusWin | printWin}}"> {{.PlusWin | printNE}} </div>		
+	</div>
+	{{end}}
+	<div>
+  </body>
+</html>
+{{end}}
