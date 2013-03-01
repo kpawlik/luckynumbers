@@ -8,7 +8,7 @@ import (
 )
 
 func init() {
-	http.HandleFunc("/fix", fix)
+	//http.HandleFunc("/fix", fix)
 }
 
 func fix(w http.ResponseWriter, r *http.Request) {

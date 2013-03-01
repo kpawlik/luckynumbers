@@ -39,19 +39,10 @@ func init() {
 	http.HandleFunc("/stats", stats)
 	http.HandleFunc("/check", check)
 	http.HandleFunc("/favicon.ico", dump)
-	// for artforma
-	http.HandleFunc("/hack", hack)
-
 }
 
 // Do nothing
 func dump(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "")
-}
-
-// for artforma. Enything else except empty string 
-// wil do not allow generation of images in generator
-func hack(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "")
 }
 
