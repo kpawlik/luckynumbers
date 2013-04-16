@@ -101,7 +101,7 @@ func GetLastLottoResutls(c appengine.Context) (result *LottoResults, err error) 
 // Return slice of all entities from Results collection.
 // Results are sorted by Date
 func GetLottoResults(c appengine.Context) (results []*LottoResults, err error) {
-	q := datastore.NewQuery("Results").Order("Date")
+	q := datastore.NewQuery("Results").Order("-Date")
 	for t := q.Run(c); ; {
 		result := &LottoResults{}
 		_, err = t.Next(result)
